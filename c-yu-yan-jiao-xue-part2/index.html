@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="信号与系统课设笔记, Cambrian">
+    <meta name="keywords" content="C语言教学-part2, Cambrian">
     <meta name="description" content="null">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -14,7 +14,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>信号与系统课设笔记 | Cambrian</title>
+    <title>C语言教学-part2 | Cambrian</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -256,12 +256,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">信号与系统课设笔记</h1>
+                    <h1 class="description center-align post-title">C语言教学-part2</h1>
                 </div>
             </div>
         </div>
@@ -377,16 +377,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/MATLAB/">
-                                <span class="chip bg-color">MATLAB</span>
+                            <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                <span class="chip bg-color">C语言</span>
                             </a>
                         
-                            <a href="/tags/Fourier/">
-                                <span class="chip bg-color">Fourier</span>
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">教程</span>
                             </a>
                         
-                            <a href="/tags/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/">
-                                <span class="chip bg-color">信号与系统</span>
+                            <a href="/tags/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/">
+                                <span class="chip bg-color">琴理工作室</span>
                             </a>
                         
                     </div>
@@ -397,8 +397,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E6%A0%A1%E8%AF%BE%E7%A8%8B/" class="post-category">
-                                学校课程
+                            <a href="/categories/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/" class="post-category">
+                                琴理工作室
                             </a>
                         
                     </div>
@@ -410,28 +410,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-08
+                    2021-06-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-08
+                    2021-06-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    955
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -454,75 +454,63 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="MatLab在线"><a href="#MatLab在线" class="headerlink" title="MatLab在线"></a>MatLab在线</h1><p><a target="_blank" rel="noopener" href="https://matlab.mathworks.com/">MATLAB (mathworks.com)</a></p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a target="_blank" rel="noopener" href="https://max.book118.com/html/2019/0620/7132145033002034.shtm">利用MATLAB实现常用非周期时间信号的频谱和FT的性质(微分特性和卷积定理).doc (book118.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/165369211">希腊字母Typora格式 - 知乎 (zhihu.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/guikunchen/article/details/88652407">LaTeX——使用Typora编写基于LaTeX的数学公式_guikunchen的博客-CSDN博客</a></p>
-<h1 id="MatLab笔记"><a href="#MatLab笔记" class="headerlink" title="MatLab笔记"></a>MatLab笔记</h1><h2 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h2><h3 id="rectpuls"><a href="#rectpuls" class="headerlink" title="rectpuls"></a>rectpuls</h3><p>生成一个矩形脉冲。</p>
-<p>官方文档：</p>
-<pre class="line-numbers language-none"><code class="language-none">This MATLAB function returns a continuous, aperiodic, unity-height rectangular  pulse at the sample times indicated in array t, centered about t = 0 and with a   default width of 1.
-y = rectpuls(t)
-y = rectpuls(t,w)
-即：此MATLAB函数在数组 t 所指示的采样时间处返回一个连续的，非周期的，单位高度的矩形脉冲，该脉冲以t = 0为中心，默认宽度为1。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h2><p>格式占位符(%)是在C/C++语言中格式输入函数，如<code>scanf()</code>、<code>printf()</code>等函数中使用。其意义就是起到格式占位的意思，表示在该位置有输入或者输出。</p>
+<p>以下为C语言中各占位符介绍。</p>
+<p><img src="D:/SynologyDrive/学习/琴理2020级C语言教学/公众号/imgs/占位符表.jpg" alt="image-20201116195930505"></p>
+<p>其最常见的用法即用在格式化输入输出函数中，即<code>scanf()</code>与<code>printf()</code>。</p>
+<p>以<code>printf()</code>函数为例，其使用方式为<code>int printf( const char *restrict format, ... );</code>。其中：</p>
+<p>​    <code>const char *restrict format</code>意为该处需填入一个仅能通过指针引用的格式化字符常量，对新人来说只需知道此处应填入一个“输出模板”即可，即最终的输出形式；</p>
+<p>​    <code>...</code>为将要输入/输出至占位符位置的值，多个值之间以逗号<code>,</code>分隔。</p>
+<p><em>补充：需注意的是，不仅输出函数会将输出按照<code>format</code>参数格式化，输入函数同样也会如此执行。换句话说，用户在输入时也必须严格按照<code>format</code>格式进行输入，否则将不能正常输入。具体参考下面使用示例。</em></p>
+<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><p>源码：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a=%d , "</span> <span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a=%d , a+1=%d"</span> <span class="token punctuation">,</span> a <span class="token punctuation">,</span> a<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42031142/article/details/106171814">Matlab中的rectpuls函数解析_wshwc的博客-CSDN博客</a>    </p>
-<h3 id="exp"><a href="#exp" class="headerlink" title="exp"></a>exp</h3><p>生成指数函数。</p>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">Y <span class="token operator">=</span> <span class="token function">exp</span><span class="token punctuation">(</span>X<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>输出结果：</p>
+<p><code> a=1  , a=1 , a+1 = 2</code></p>
+<p>源码：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> a<span class="token punctuation">;</span>
+<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"a=%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p><code>Y = exp(X)</code> 为数组 <code>X</code> 中的每个元素返回指数 $$。对于复数元素 <code>z= x+ iy</code>，它返回以下复指数<br>$$<br>e^z=e^x(cos y+i sin y)<br>$$</p>
-<h3 id="sinc"><a href="#sinc" class="headerlink" title="sinc"></a>sinc</h3><p>生成抽样信号。</p>
-<h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">Sat <span class="token operator">=</span> <span class="token function">sinc</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>错误输入示例：</p>
+<p><code>1</code></p>
+<p>如此输入将导致变量a无法被正确赋值；</p>
+<p>正确输入示例</p>
+<p><code>a=1</code></p>
+<p>如此输入后<code>a</code>的值将置为<code>1</code>。</p>
+<h2 id="运算符、表达式、语句"><a href="#运算符、表达式、语句" class="headerlink" title="运算符、表达式、语句"></a>运算符、表达式、语句</h2><h3 id="基本运算符"><a href="#基本运算符" class="headerlink" title="基本运算符"></a>基本运算符</h3><p>包括赋值、算数、位、逻辑<del>和逗号运算符</del>等；</p>
+<p>​    赋值运算符，即<code>=</code>，其作用为将右侧侧的值写入左侧，需注意的其左侧必须能被修改，不能为常量；</p>
+<p>​    算数运算符，即<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>、<code>%</code>等，数量太多，此处暂不一一列举。此类运算符都具有数学意义，一般用于数值间的数学运算。因其意义多与数学公式中的运算符相同，此类运算符对一般来讲直接凭直觉使用即可，有需要的同学可以自行上网查询相关资料；</p>
+<p>​    位运算符，即<code>&lt;&lt;</code>、<code>&gt;&gt;</code>、<code>&amp;</code>、<code>|</code>、<code>~</code>、<code>^</code>，此运算符涉及位运算，新人一般不会用到。前两个作用是按照指示方向将当前数值的二进制码左移或右移一位，超出范围的部分舍弃、缺失的部分用0补齐，后四个运算符分别为按位进行与、或、非、异或运算。</p>
+<p>​    逻辑运算符，即<code>&amp;&amp;</code>、<code>||</code>、<code>!</code>，三个运算符分别对应与、或、非运算。</p>
+<p><em>补充：对于上面的位运算与逻辑运算的运算方式，算是布尔代数的基本内容，需要了解的同学可以自行上网搜索布尔代数，此处暂不展开篇幅做解释；</em></p>
+<p><em>逗号运算符较为特殊，其一般用于几个基本语句与函数的参数表内分隔多个参数。但由于逗号运算符的运算逻辑与优先级太过于奇怪，我们几乎一辈子都不会在参数列表外使用逗号运算符，即使在参数列表中，我们也习惯于将其用法看作是固定的语法要求，而不是去理解参数列表中逗号运算符的运算逻辑。以至于甚至某些教材都忘了还有这么一个运算符存在…</em></p>
+<h3 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h3><p>较容易理解：表达式由运算符与对象组成。且<strong>每个表达式都有一个值。</strong></p>
+<p>例如这就是一个表达式：<code>-4+6</code>，其值为2。</p>
+<p>对于较长的表达式，我们就需要注意运算符的优先级问题。最直观的例子就是<code>1+2*3</code>，我们在小学就学过，应该先算乘除，后算加减，所以这个表达式的结果为6而非9。同样如小学学过，算式中有括号就先算括号里的，那么表达式<code>(1+2)*3</code>的结果即为9而非6。</p>
+<p>而对于括号的嵌套问题，C语言向数学运算中一样有小括号、中括号、大括号的区分，统一使用小括号。例如表达式<code>(2+(3+4)*5)*6</code>的值即为222。</p>
+<p>当然，不止算术运算符存在优先级的问题，其他运算符同样具有不同的优先级，使用时需注意。</p>
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><p>语句为C语言的基本构建块，一条语句相当于一条完整的计算机指令，每个语句以分号结尾。</p>
+<p>语句可以是表达式，如：</p>
+<p><code>GuaKe = true;</code></p>
+<p>可以是一个值，如：</p>
+<p><code>666;</code></p>
+<p>甚至可以是“空语句”：</p>
+<p><code>;</code></p>
+<p><strong>需要注意的是，分号为一条语句结尾的唯一标识，例如以下代码也只是一条语句：</strong></p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> a <span class="token punctuation">,</span> b <span class="token punctuation">,</span> c <span class="token punctuation">,</span> d <span class="token punctuation">,</span>
+	e <span class="token punctuation">,</span> f <span class="token punctuation">,</span> g <span class="token punctuation">,</span> h <span class="token punctuation">,</span>
+	i <span class="token punctuation">,</span> j <span class="token punctuation">,</span> k <span class="token punctuation">,</span> l<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="fourier"><a href="#fourier" class="headerlink" title="fourier"></a>fourier</h3><h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token function">fourier</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
-<span class="token function">fourier</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span>transVar<span class="token punctuation">)</span>
-<span class="token function">fourier</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span>var<span class="token punctuation">,</span>transVar<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>f-输入，可以是表达式、函数、向量或矩阵等<br>var-变量，一般为时间变量或空间变量，如果不设置该变量，一般使用函数中的符号变量作为默认值</p>
-<p>transVar-转换变量，可以是符号变量，表达式，向量或矩阵，该变量通常称为“频率变量”，默认情况下，傅立叶使用ω，如果ω是f的自变量，则傅立叶使用ν。<br>$$<br>F(\omega)=\int_{-\infty}^{+\infty}{f(x)e^{-i\omega x}dx}<br>$$</p>
-<h3 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h3><p>绘制二维图像：</p>
-<pre class="line-numbers language-none"><code class="language-none">plot函数的基本调用格式为：
-1、plot(y)
-当y为向量时，是以y的分量为纵坐标，以元素序号为横坐标，用直线依次连接数据点，绘制曲线。若y为实矩阵，则按列绘制每列对应的曲线。
-2、plot(x,y)
-若y和x为同维向量，则以x为横坐标,y为纵坐标绘制连线图。若x是向量，y是行数或列数与x长度相等的矩阵，则绘制多条不同色彩的连线图，x被作为这些曲线的共同横坐标。若x和y为同型矩阵，则以x,y对应元素分别绘制曲线，曲线条数等于矩阵列数。
-3、plot(x1,y1,x2,y2,……)
-在此格式中，每对x,y必须符合plot(x,y)中的要求，不同对之间没有影响，命令将对每一对x,y绘制曲线。
-以上三种格式中的x,y都可以是表达式。plot是绘制一维曲线的基本函数，但在使用此函数之前，须先定义曲线上每一点的x以及y坐标。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="axis"><a href="#axis" class="headerlink" title="axis"></a>axis</h3><p>控制坐标轴范围与样式</p>
-<pre class="line-numbers language-none"><code class="language-none">axis([XMIN XMAX YMIN YMAX ZMIN ZMAX]) 设置当前所绘图像的x轴、y轴和z轴的范围。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="语法-功能"><a href="#语法-功能" class="headerlink" title="语法\功能"></a>语法\功能</h2><h3 id="创建函数"><a href="#创建函数" class="headerlink" title="创建函数"></a>创建函数</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25018077/article/details/88998126">Matlab程序设计（六）—-创建函数（function）_曾经爱过她的回眸的博客-CSDN博客</a></p>
-<h1 id="时域信号图像"><a href="#时域信号图像" class="headerlink" title="时域信号图像"></a>时域信号图像</h1><h2 id="门信号"><a href="#门信号" class="headerlink" title="门信号"></a>门信号</h2><p>门宽为2</p>
-<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">t<span class="token operator">=</span><span class="token operator">-</span><span class="token number">4</span><span class="token operator">:</span><span class="token number">0.001</span><span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">;</span>	<span class="token comment">%横坐标[-4,4]，绘图每隔0.001取一点；本质为生成一个数组t[8000]</span>
-T<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>	<span class="token comment">%门宽</span>
-ft <span class="token operator">=</span> <span class="token function">rectplus</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">%函数值，记录每个横坐标为t除的函数值</span>
-<span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>ft<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">%绘图</span>
-<span class="token function">axis</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">0.5</span><span class="token punctuation">,</span><span class="token number">1.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">%设定坐标轴范围</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="指数信号"><a href="#指数信号" class="headerlink" title="指数信号"></a>指数信号</h2><p>$$<br>f(t)=e^{at}<br>$$</p>
-<p>例：<br>$$<br>f(t)=e^{2t}<br>$$</p>
-<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">t<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">0.001</span><span class="token operator">:</span><span class="token number">5</span><span class="token punctuation">;</span>
-a<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
-ft <span class="token operator">=</span> <span class="token function">exp</span><span class="token punctuation">(</span>a<span class="token operator">*</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>ft<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="正弦信号（余弦信号同理）"><a href="#正弦信号（余弦信号同理）" class="headerlink" title="正弦信号（余弦信号同理）"></a>正弦信号（余弦信号同理）</h2><p>$$<br>f(t)=Asin(\omega t+\phi)<br>$$</p>
-<p>例：<br>$$<br>f(t)=2sin(8\pi t+\frac{\pi}{6})<br>$$</p>
-<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">A<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
-w<span class="token operator">=</span><span class="token number">8</span><span class="token operator">*</span><span class="token keyword">pi</span><span class="token punctuation">;</span>
-phi<span class="token operator">=</span><span class="token keyword">pi</span><span class="token operator">/</span><span class="token number">6</span>
-t<span class="token operator">=</span><span class="token operator">-</span><span class="token number">5</span><span class="token operator">:</span><span class="token number">0.001</span><span class="token operator">:</span><span class="token number">5</span><span class="token punctuation">;</span>
-ft<span class="token operator">=</span>A<span class="token operator">*</span><span class="token function">sin</span><span class="token punctuation">(</span>w<span class="token operator">*</span>t<span class="token operator">+</span>phi<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>ft<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><em>看来MATLAB中<code>pi</code>即位常量<code>π</code></em></p>
-<h2 id="抽样信号"><a href="#抽样信号" class="headerlink" title="抽样信号"></a>抽样信号</h2><p>$$<br>sinc(t)=Sa(t)=\frac{sin(\pi t)}{\pi t}<br>$$</p>
-<p>例：</p>
-<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">t<span class="token operator">=</span><span class="token operator">-</span><span class="token number">5</span><span class="token operator">:</span><span class="token number">0.001</span><span class="token operator">:</span><span class="token number">5</span><span class="token punctuation">;</span>
-sat<span class="token operator">=</span><span class="token function">sinc</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">plot</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>sat<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>由大括号包裹起来的一条或多条甚至零条语句成为一个代码块。代码块中无论包含什么内容在外部看来都算且只算一条语句。</p>
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><p>在实际开发中，我们时常需要将一种类型的值转换为另一种类型。其写作格式及样例如下：</p>
+<p><code>(目标类型)源数据</code></p>
+<p><code>int a = (int)1.6;</code></p>
+<p>以上一条语句实现了将1.6这一浮点型数值转换为整型后赋值给整型变量a的操作。</p>
+<p>需注意的是，不同类型间进行强制类型转换的规则会有所不同，如以上语句执行完毕后a的值为1而非2，这是因为浮点型在强制转换为整形后其小数部分是直接去掉而非四舍五入。所以在进行强制类型转换时应特别注意转换规则。</p>
+<p><em>补充：综合已经介绍过的内容，我们是可以实现四舍五入制度的类型转换的。需要用到运算符<code>?:</code>。例如将把浮点类型的变量b经四舍五入转换为整型后赋值给a，实现方式即为<code>int a = (int)(b+0.5)&gt;(int)b?(int)(b+1):(int)b;</code>感兴趣的同学可以自行推到一下这个式子。</em></p>
+<p>*但严格来说该式仍有问题，因浮点型无法精确表示一个有效位数过长的数字。</p>
 
                 
             </div>
@@ -549,7 +537,7 @@ sat<span class="token operator">=</span><span class="token function">sinc</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.Cambria.xyz/test/">http://blog.Cambria.xyz/test/</a>
+                    <a href="https://blog.Cambria.xyz/c-yu-yan-jiao-xue-part2/">https://blog.Cambria.xyz/c-yu-yan-jiao-xue-part2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -587,16 +575,16 @@ sat<span class="token operator">=</span><span class="token function">sinc</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/MATLAB/">
-                                    <span class="chip bg-color">MATLAB</span>
+                                <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                    <span class="chip bg-color">C语言</span>
                                 </a>
                             
-                                <a href="/tags/Fourier/">
-                                    <span class="chip bg-color">Fourier</span>
+                                <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">教程</span>
                                 </a>
                             
-                                <a href="/tags/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/">
-                                    <span class="chip bg-color">信号与系统</span>
+                                <a href="/tags/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/">
+                                    <span class="chip bg-color">琴理工作室</span>
                                 </a>
                             
                         </div>
@@ -647,31 +635,31 @@ sat<span class="token operator">=</span><span class="token function">sinc</span>
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/test/">
+                <a href="/c-yu-yan-jiao-xue-part2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="信号与系统课设笔记">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="C语言教学-part2">
                         
-                        <span class="card-title">信号与系统课设笔记</span>
+                        <span class="card-title">C语言教学-part2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常用非周期时间信号的频谱与FT性质
+                            开发环境介绍，C语言程序基本结构介绍，C语言中的基本元素介绍
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E6%A0%A1%E8%AF%BE%E7%A8%8B/" class="post-category">
-                                    学校课程
+                            <a href="/categories/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/" class="post-category">
+                                    琴理工作室
                                 </a>
                             
                             
@@ -682,16 +670,16 @@ sat<span class="token operator">=</span><span class="token function">sinc</span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MATLAB/">
-                        <span class="chip bg-color">MATLAB</span>
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
                     </a>
                     
-                    <a href="/tags/Fourier/">
-                        <span class="chip bg-color">Fourier</span>
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
                     </a>
                     
-                    <a href="/tags/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">信号与系统</span>
+                    <a href="/tags/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/">
+                        <span class="chip bg-color">琴理工作室</span>
                     </a>
                     
                 </div>
@@ -705,32 +693,52 @@ sat<span class="token operator">=</span><span class="token function">sinc</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/hello-world/">
+                <a href="/c-yu-yan-jiao-xue-part1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C语言教学-Part1">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">C语言教学-Part1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            开发环境介绍，C语言程序基本结构介绍，C语言中的基本元素介绍
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-09
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Cambria
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/" class="post-category">
+                                    琴理工作室
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/">
+                        <span class="chip bg-color">琴理工作室</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -860,20 +868,13 @@ sat<span class="token operator">=</span><span class="token function">sinc</span>
 </main>
 
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
  <footer class="page-footer bg-color">  <div class="container row center-align" 
          style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right"> Copyright&nbsp;&copy;  <span id="year">2021</span>  <span id="year">2021</span> <a href="/about" 
             target="_blank">Cambria</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> &nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" 
             |target="_blank">Matery</a>
-            <br>  &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">1k</span>
+            <br>  &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">4.6k</span>
                  
                 <span id="busuanzi_container_site_pv"> &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp; <span id="busuanzi_value_site_pv" 
                     class="white-color"></span>

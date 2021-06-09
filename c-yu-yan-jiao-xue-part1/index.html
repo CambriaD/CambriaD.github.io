@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Cambrian">
+    <meta name="keywords" content="C语言教学-Part1, Cambrian">
     <meta name="description" content="null">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -14,7 +14,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Cambrian</title>
+    <title>C语言教学-Part1 | Cambrian</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -261,7 +261,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">C语言教学-Part1</h1>
                 </div>
             </div>
         </div>
@@ -375,12 +375,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                <span class="chip bg-color">C语言</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">教程</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/">
+                                <span class="chip bg-color">琴理工作室</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/" class="post-category">
+                                琴理工作室
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -389,28 +410,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-07
+                    2021-06-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-07
+                    2021-06-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -433,19 +454,131 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="前置知识-IDE"><a href="#前置知识-IDE" class="headerlink" title="前置知识:IDE"></a>前置知识:IDE</h1><h2 id="何为IDE"><a href="#何为IDE" class="headerlink" title="何为IDE"></a>何为IDE</h2><p>​                即集成开发环境（IDE，Integrated Development Environment ），包含编辑器、编译器、调试器、图形界面等工具。因一般都包含项目管理，代码高亮，自动补全，代码调试等功能，故使用IDE开发相比直接在文本编辑器中写代码，在终端中使用命令调试、编译能极大提升开发效率。</p>
+<h2 id="C-C-开发常见IDE"><a href="#C-C-开发常见IDE" class="headerlink" title="C/C++开发常见IDE"></a>C/C++开发常见IDE</h2><p>Dev-C++、CLion、VS、VSCode</p>
+<h2 id="IDE推荐"><a href="#IDE推荐" class="headerlink" title="IDE推荐"></a>IDE推荐</h2><p>新人推荐Dev-C++上手，非常轻量化，且安装完不用进行过多配置即可使用，调试功能也能满足日常学习需求；</p>
+<p>熟练后推荐尝试Clion/VSCode，两者安装均相对繁琐但功能强大，且可通过安装插件进一步扩展其功能；</p>
+<p>VS相对更适合专业的C/C++开发人员使用，对于学习来说太过臃肿</p>
+<h1 id="C语言简介"><a href="#C语言简介" class="headerlink" title="C语言简介"></a>C语言简介</h1><h2 id="程序基本结构"><a href="#程序基本结构" class="headerlink" title="程序基本结构"></a>程序基本结构</h2><h3 id="常有头文件"><a href="#常有头文件" class="headerlink" title="常有头文件"></a>常有头文件</h3><p>头文件作为一种包含功能函数、数据接口声明的载体文件，主要用于保存程序的声明，而定义文件用于保存程序的实现。</p>
+<p>通俗来讲：倘若将程序比作汽车，C语言比作原料，则头文件相当于一个文件夹，文件夹中放的是汽车各部件的图纸。</p>
+<p><em>补充：按照这种类比，则定义文件可以理解为代工厂，工厂将原材料按照图纸加工成部件，编程的工作即是把各部件拼成一辆完整的汽车。</em></p>
+<h3 id="常含有宏定义"><a href="#常含有宏定义" class="headerlink" title="常含有宏定义"></a>常含有宏定义</h3><p>宏（Macro），是一种批量处理的称谓。计算机科学里的宏是一种抽象（Abstraction），它根据一系列预定义的规则替换一定的文本模式。</p>
+<p>通俗来讲：即是将一段字符串替换成另一串字符串。例如倘若程序中有<code>#define TEMP 20</code>，则程序中所有的<code>TEMP</code>单词均会被替换成<code>20</code>。</p>
+<p><em>补充：需注意的是，宏定义在替换文本是会无视前后文内容。若定义了</em><code>#define TEMP 20</code>，程序中又写了<code>TEMPLE = "寺庙";</code>，则编译前会被转义为<code>20LE = "寺庙";</code>。</p>
+<h3 id="必含有主函数"><a href="#必含有主函数" class="headerlink" title="必含有主函数"></a>必含有主函数</h3><p>必须包含<code>main()</code>函数为C语言的语法规则，必须遵循。</p>
+<h2 id="基本的程序结构"><a href="#基本的程序结构" class="headerlink" title="基本的程序结构"></a>基本的程序结构</h2><h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h3><p>下面是一个最简单的C语言程序：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span><span class="token comment">//引用头文件，内部包含输入输出函数</span></span>
+<span class="token comment">/**
+  *主函数
+  */</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment">//返回值，结束函数</span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>该代码含有一个头文件和一个主函数以及两种注释。</p>
+<h4 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h4><p>关于头文件是什么已经做过介绍，使用方式即<code>#include &lt;头文件名&gt;</code>或<code>#include ”头文件名“</code>。两种格式的区别在于前者先在标准库中查找，查找不到在path中查找。后者为文件路径，若直接是文件名则在项目根目录下查找。</p>
+<p><em>补充：path为系统环境变量中的属性，其值为一个或多个目录。</em></p>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">环境变量_百度百科 (baidu.com)</a></p>
+<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>注释就是对代码的解释和说明，其目的是让人们能够更加轻松地了解代码。注释是编写程序时，写程序的人给一个语句、程序段、函数等的解释或提示，能提高程序代码的可读性。<br>注释只是为了提高可读性，不会被计算机编译。</p>
+<p>注释有两种格式：<code>//注释内容</code>和<code>/*注释内容*/</code>。前者的生效范围是<code>//</code>及其之后的一整行内容，换行后即失效；后者的生效范围是<code>/*</code>与<code>*/</code>及其之间的内容，从以上程序可以看出后者是可以跨行使用的。</p>
+<p><em>补充：因注释不会被编译，以下注释也是可正常使用的：<code>#inc/*注释内容*/lude &lt;stdio.h&gt;</code>。但注释的目的是提高代码的可读性，这么做显然与该目的相悖，所以正常情况下不会出现这种用法。</em></p>
+<h4 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h4><p>即图中的<code>int main(){代码内容}</code>，其中：</p>
+<p><code>int</code>称为数据类型(后续将会专门介绍)，标识着该函数的运行结果是什么类型的数据；</p>
+<p><code>main</code>是函数名，即函数的名字，主函数的函数名固定为<code>main</code>，其他函数名称在符合规范的前提下可以任意选择；</p>
+<p><code>()</code>内的内容成为形式参数列表，可留空，但主函数的形式参数列表留空的话会默认填充<code>String args[]</code>，至于该填充的意义是什么以后将做详细介绍；</p>
+<p><code>{}</code>内包含代码后的整体成为代码块，紧跟在形式参数列表后成为函数体，即函数具体执行的功能描述；</p>
+<p><code>printf("hello world");</code>与 <code> return 0;</code>称为语句，语句为C语言的基本构建块，一条语句相当于一条完整的计算机指令，每个语句以分号结尾。</p>
+<p><em>补充：参考函数的概念可知,<code>printf("hello world")</code>就是一个函数</em></p>
+<h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><p>规范并非规则，非强制要求，但按照规范书写代码可以提升代码的可读性，方便与人合作开发与后续维护，故代码规范非常需要重视。</p>
+<p>1、善用回车保留空行，一个模块一段，模块与模块之间空行分隔；</p>
+<p>2、变量、函数命名规范，避免无意义命名、拼音命名，建议驼峰命名或首字母大写命名；</p>
+<p>3.1、善用tab键控制缩进而非用空格键控制；</p>
+<p><em>3.2、倘若有跨平台开发的需求，则需注意要用空格控制缩进而非tab。不同平台对<code>\t</code>的不同定义可能会导致用tab键控制缩进的代码排版爆炸。</em></p>
+<p>4、<strong>随手写注释</strong>。</p>
+<p>……</p>
+<h2 id="C语言中其他基本元素"><a href="#C语言中其他基本元素" class="headerlink" title="C语言中其他基本元素"></a>C语言中其他基本元素</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>由于变量让你能够把程序中准备使用的每一段数据都赋给一个简短、易于记忆的名字，因此它们十分有用。变量可以保存程序运行时用户输入的数据、特定运算的结果以及要在窗体上显示的一段数据等。简而言之，变量是用于跟踪几乎所有类型信息的简单工具。</p>
+<p>变量正如数学公式里的x，ζ，λ等字符，用来书写时替代特定的数据，方便开发。</p>
+<p>其定义方法为<code>数据类型 变量名;</code>，如<code>int x;</code>。<em>数据类型后面将作介绍</em></p>
+<p>根据定义位置不同，C语言中存在全局变量（定义于函数外部）与局部变量（定义于某函数内部）。前者可在其定义的位置后的任意位置使用，后者仅能在他所在的函数体内、其定义位置后使用。</p>
+<p>但需注意的是，并不是将所有变量都在最开头定义成全局变量就能解决一切问题。编程时应尽力避免全局变量的使用，原因在以后介绍C语言的内存分配机制时会解释。</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h4><p>整型<code>int</code>，浮点型<code>float</code>/<code>double</code>，布尔型<code>bool</code>，字符型<code>char</code>等</p>
+<p><em>注：其中布尔型为C99及之后版本加入，且需引入头文件stdbool.h</em></p>
+<h4 id="其他数据类型"><a href="#其他数据类型" class="headerlink" title="其他数据类型"></a>其他数据类型</h4><p>如字符串型<code>string</code>，结构体型<code>struct 结构体名称</code>，枚举型<code>enum</code>等</p>
+<h4 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h4><p><code>const</code>(不可修改)、<code>unsigned</code>(无符号，即非负)等</p>
+<h4 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h4><p>保留字即C语言中本身具有意义的单词等，无法作为变量名、函数名等使用，如<code>int</code>就是一个保留字。</p>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">存储大小</th>
+<th align="left">值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">char</td>
+<td align="left">1 字节</td>
+<td align="left">-128 到 127 或 0 到 255</td>
+</tr>
+<tr>
+<td align="left">unsigned char</td>
+<td align="left">1 字节</td>
+<td align="left">0 到 255</td>
+</tr>
+<tr>
+<td align="left">signed char</td>
+<td align="left">1 字节</td>
+<td align="left">-128 到 127</td>
+</tr>
+<tr>
+<td align="left">int</td>
+<td align="left">2 或 4 字节</td>
+<td align="left">-32,768 到 32,767 (32位)或 -2,147,483,648 到 2,147,483,647 (64位)</td>
+</tr>
+<tr>
+<td align="left">unsigned int</td>
+<td align="left">2 或 4 字节</td>
+<td align="left">0 到 65,535 (32位)或 0 到 4,294,967,295 (64位)</td>
+</tr>
+<tr>
+<td align="left">short</td>
+<td align="left">2 字节</td>
+<td align="left">-32,768 到 32,767</td>
+</tr>
+<tr>
+<td align="left">unsigned short</td>
+<td align="left">2 字节</td>
+<td align="left">0 到 65,535</td>
+</tr>
+<tr>
+<td align="left">long</td>
+<td align="left">4 字节</td>
+<td align="left">-2,147,483,648 到 2,147,483,647</td>
+</tr>
+<tr>
+<td align="left">unsigned long</td>
+<td align="left">4 字节</td>
+<td align="left">0 到 4,294,967,295</td>
+</tr>
+<tr>
+<td align="left">float</td>
+<td align="left">4 字节</td>
+<td align="left">1.2E-38 到 3.4E+38</td>
+</tr>
+<tr>
+<td align="left">double</td>
+<td align="left">8 字节</td>
+<td align="left">2.3E-308 到 1.7E+308</td>
+</tr>
+<tr>
+<td align="left">long double</td>
+<td align="left">16 字节</td>
+<td align="left">3.4E-4932 到 1.1E+4932</td>
+</tr>
+</tbody></table>
 
                 
             </div>
@@ -472,7 +605,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://blog.Cambria.xyz/hello-world/">http://blog.Cambria.xyz/hello-world/</a>
+                    <a href="https://blog.Cambria.xyz/c-yu-yan-jiao-xue-part1/">https://blog.Cambria.xyz/c-yu-yan-jiao-xue-part1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,7 +642,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                                    <span class="chip bg-color">C语言</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">教程</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/">
+                                    <span class="chip bg-color">琴理工作室</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -557,7 +702,64 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/test/">
+                <a href="/c-yu-yan-jiao-xue-part2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="C语言教学-part2">
+                        
+                        <span class="card-title">C语言教学-part2</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            开发环境介绍，C语言程序基本结构介绍，C语言中的基本元素介绍
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-09
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/" class="post-category">
+                                    琴理工作室
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/">
+                        <span class="chip bg-color">琴理工作室</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/xin-hao-yu-xi-tong-ke-cheng-she-ji-bi-ji/">
                     <div class="card-image">
                         
                         
@@ -573,9 +775,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -604,44 +806,6 @@
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Cambria
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>
@@ -776,7 +940,7 @@
             target="_blank">Cambria</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> &nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" 
             |target="_blank">Matery</a>
-            <br>  &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">1k</span>
+            <br>  &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">4.6k</span>
                  
                 <span id="busuanzi_container_site_pv"> &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp; <span id="busuanzi_value_site_pv" 
                     class="white-color"></span>
