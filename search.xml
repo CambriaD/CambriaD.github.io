@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>班级魔方半自动打卡</title>
+      <link href="/fucksylu-bjmf/"/>
+      <url>/fucksylu-bjmf/</url>
+      
+        <content type="html"><![CDATA[<h1 id="班级魔方半自动打卡"><a href="#班级魔方半自动打卡" class="headerlink" title="班级魔方半自动打卡"></a><a href="http://cambria.f3322.net:2333/FuckSYLUXGWeb/bjmfWeb/loginQRCode">班级魔方半自动打卡</a></h1><h2 id="👆👆👆点击上方标题栏提交信息即可体验🎉"><a href="#👆👆👆点击上方标题栏提交信息即可体验🎉" class="headerlink" title="👆👆👆点击上方标题栏提交信息即可体验🎉"></a>👆👆👆点击上方标题栏提交信息即可体验🎉</h2><h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p>点击上方标题栏进入网页，微信扫描二维码，在班级魔法公众号中完成登录授权，在<code>Your Name in Pinyin</code>输入框中用<strong>拼音</strong>输入你的姓名，点击<code>Submit</code>按钮即可。</p><p>二维码有效时间应该是40秒，请尽快操作；超时也没关系，关掉二维码页面重新打开重新操作即可。</p><p><em>用中文输入姓名的话应该是会出问题</em></p><p>程序工作时间为每天<code>22:00-23:00</code>每分钟，所以签到结果请于一分钟后检查。</p><p><em>其实你只要按照使用说明使用的话不用检查，一定能成功</em></p><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul><li>使用班级魔方网页版登录API进行登录，登录有效时间可能只有两个小时。也就是说每天仍然需要手动扫码登录，所以叫它半自动。该问题在后续更新中将解决，现版本存在的意义是实现让你无论在哪都能打卡。</li><li>目前版本仅支持<code>19030602</code>班级同学使用，其他班级同学如果有使用意向可以返回首页联系我，我会积极适配。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> HttpClient </tag>
+            
+            <tag> 搞事 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spring+MyBatisPlus+Swagger2常用部署配置及注意事项</title>
       <link href="/spring-chang-yong-pei-zhi/"/>
       <url>/spring-chang-yong-pei-zhi/</url>
