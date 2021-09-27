@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网络唤醒实现, Cambrian">
+    <meta name="keywords" content="班级魔方自动打卡, Cambrian">
     <meta name="description" content="null">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -14,7 +14,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>网络唤醒实现 | Cambrian</title>
+    <title>班级魔方自动打卡 | Cambrian</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -256,12 +256,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">网络唤醒实现</h1>
+                    <h1 class="description center-align post-title">班级魔方自动打卡</h1>
                 </div>
             </div>
         </div>
@@ -381,12 +381,12 @@
                                 <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%94%A4%E9%86%92/">
-                                <span class="chip bg-color">网络唤醒</span>
+                            <a href="/tags/HttpClient/">
+                                <span class="chip bg-color">HttpClient</span>
                             </a>
                         
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/tags/%E6%90%9E%E4%BA%8B/">
+                                <span class="chip bg-color">搞事</span>
                             </a>
                         
                     </div>
@@ -410,28 +410,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-17
+                    2021-09-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-17
+                    2021-09-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    536
+                    423
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -454,107 +454,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="网络唤醒"><a href="#网络唤醒" class="headerlink" title="网络唤醒"></a>网络唤醒</h1><p>柠柠送了我一个树莓派，初步打算先拿来做连接局域网设备的跳板机(基于frp实现)，顺便给台式机进行网络唤醒，以便出门时也能随时使用。</p>
-<p>原理非常简单，在局域网内广播Magic Packet即可，Magic Packet的格式很简单，<code>FFFFFFFFFFFF</code>后重复目标主机的MAC地址即可。百度百科的网络唤醒词条有介绍：</p>
-<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%94%A4%E9%86%92/6911574?fr=aladdin#5">网络唤醒_百度百科 (baidu.com)</a></p>
-<p>初步打算利用Java实现，核心部分代码如下：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">StringBuilder</span> sb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"FFFFFFFFFFFF"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">16</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>mac<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token class-name">String</span> raw <span class="token operator">=</span> sb<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bytes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">102</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">204</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token class-name">String</span> temp <span class="token operator">=</span> raw<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    bytes<span class="token punctuation">[</span>i <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>temp<span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>最后将<code>bytes</code>广播即可。</p>
-<p>最后，记着打开网卡网络唤醒的开关：<img src="WakeOnLan.png" alt="开启网络唤醒支持"></p>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>代码打包成jar包，扔到树莓派上运行，电脑用WireShark抓包测试。</p>
-<p>树莓派执行：</p>
-<p><img src="RasPiTest.png" alt="树莓派脚本执行“java -jar WOL.jar”"></p>
-<p>抓包结果：</p>
-<p><img src="WireShark.png" alt="WireShark抓包结果"></p>
-<p>成功抓到包，格式无误，测试完成。</p>
-<h1 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h1><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">xyz<span class="token punctuation">.</span>cambria<span class="token punctuation">.</span>wol</span><span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">FileInputStream</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>net<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Properties</span><span class="token punctuation">;</span>
-
-<span class="token comment">/**
- * @Author Cambria
- * @creat 2021/1/25 22:34
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">WakeOnLan</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-        <span class="token class-name">Properties</span> properties <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            properties<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">"WOL.properties"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"无法读取配置文件\"mac.properties\""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token class-name">String</span> mac <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"mac"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">String</span> address <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"address"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>mac <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> mac <span class="token operator">==</span> <span class="token string">""</span> <span class="token operator">||</span> address <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> address <span class="token operator">==</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"配置文件格式错误，应为：\n\tmac = #{mac}\n\taddress = #{address}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token class-name">StringBuilder</span> sb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"FFFFFFFFFFFF"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">16</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>mac<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token class-name">String</span> raw <span class="token operator">=</span> sb<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bytes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">102</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">204</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">String</span> temp <span class="token operator">=</span> raw<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            bytes<span class="token punctuation">[</span>i <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">)</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>temp<span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token class-name">DatagramPacket</span> packet <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            packet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramPacket</span><span class="token punctuation">(</span>bytes<span class="token punctuation">,</span> bytes<span class="token punctuation">.</span>length<span class="token punctuation">,</span> <span class="token class-name">InetAddress</span><span class="token punctuation">.</span><span class="token function">getByName</span><span class="token punctuation">(</span>address<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2333</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">UnknownHostException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"IP地址格式错误"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token class-name">DatagramSocket</span> socket <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">SocketException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"创建socket出错"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            socket<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>packet<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"IO错误，无法发送数据"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        socket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"唤醒包已发送"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><em>没错，这玩意早就在用了，不过一直是放到NAS上跑有些不伦不类。现在拿出来重新扔到树莓派上</em></p>
+                <h1 id="班级魔方自动打卡"><a href="#班级魔方自动打卡" class="headerlink" title="班级魔方自动打卡"></a><a href="#">班级魔方自动打卡</a></h1><h2 id="👆👆👆点击上方标题栏提交信息即可体验🎉"><a href="#👆👆👆点击上方标题栏提交信息即可体验🎉" class="headerlink" title="👆👆👆点击上方标题栏提交信息即可体验🎉"></a>👆👆👆点击上方标题栏提交信息即可体验🎉</h2><p><em>暂未部署，预计2021/09/28 24:00前上线</em></p>
+<h1 id="使用说明-至少看完第一条👇👇👇"><a href="#使用说明-至少看完第一条👇👇👇" class="headerlink" title="使用说明(至少看完第一条👇👇👇)"></a>使用说明(至少看完第一条👇👇👇)</h1><p>点击上方标题栏进入网页，微信扫描二维码，在班级魔方公众号中完成登录授权，在<code>Your Name in Pinyin</code>输入框中用<strong>拼音</strong>输入你的姓名，点击<code>Submit</code>按钮即可。</p>
+<p>👉👉👉<strong>拼音啊！！！！！！不是中文，大小写皆可，不要空格</strong>👈👈👈</p>
+<p>二维码有效时间可能是40秒，请尽快操作；超时也没关系，关掉二维码页面重新打开或刷新后重新操作即可。</p>
+<p><em>用中文输入姓名的话应该是会出问题</em></p>
+<p>程序工作时间为每天<code>22:00-23:00</code>每15分钟，所以签到结果请于15分钟后检查。</p>
+<p><em>其实你只要按照使用说明使用的话不用检查，一定能成功</em></p>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
+<li><del>使用班级魔方网页版登录API进行登录，登录有效时间可能只有两个小时。也就是说每天仍然需要手动扫码登录，所以叫它半自动。该问题在后续更新中将解决，现版本存在的意义是实现让你无论在哪都能打卡。</del></li>
+<li>已经实现全自动打卡，登陆一次永久有效*(如果学机房不停电的话)*</li>
+<li><del>目前版本仅支持<code>19030602</code>班级同学使用，其他班级同学如果有使用意向可以返回首页联系我，我会积极适配。</del></li>
+<li>已经理论上支持所有班级（有待实验）</li>
+</ul>
+<ul>
+<li>最后感谢<a href="#">@博二兔</a>提供部署服务</li>
+</ul>
 
                 
             </div>
@@ -581,7 +496,7 @@ sb<span class="token punctuation">.</span><span class="token function">append</s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cambriad.github.io/wakeonlan/">https://cambriad.github.io/wakeonlan/</a>
+                    <a href="https://cambriad.github.io/fuckbjmf-fullautover/">https://cambriad.github.io/fuckbjmf-fullautover/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -623,12 +538,12 @@ sb<span class="token punctuation">.</span><span class="token function">append</s
                                     <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%94%A4%E9%86%92/">
-                                    <span class="chip bg-color">网络唤醒</span>
+                                <a href="/tags/HttpClient/">
+                                    <span class="chip bg-color">HttpClient</span>
                                 </a>
                             
-                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/tags/%E6%90%9E%E4%BA%8B/">
+                                    <span class="chip bg-color">搞事</span>
                                 </a>
                             
                         </div>
@@ -673,7 +588,7 @@ sb<span class="token punctuation">.</span><span class="token function">append</s
         repo: 'CambriaD.github.io',
         owner: 'CambriaD',
         admin: "CambriaD",
-        id: '2021-06-17T20-36-26',
+        id: '2021-09-27T22-30-02',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -701,29 +616,30 @@ sb<span class="token punctuation">.</span><span class="token function">append</s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/fucksylu-xg-autotemperaturecollect-web/">
+                <a href="/fuckbjmf-fullautover/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="沈阳理工大学体温填报自动化">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="班级魔方自动打卡">
                         
-                        <span class="card-title">沈阳理工大学体温填报自动化</span>
+                        <span class="card-title">班级魔方自动打卡</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            提交你的学工登录信息后，每天中午12:05自动填报一天的体温状况
+                            微信扫码登录,22:00-23:00自动签到打卡，地点为沈阳理工大学
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -736,6 +652,7 @@ sb<span class="token punctuation">.</span><span class="token function">append</s
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -762,31 +679,31 @@ sb<span class="token punctuation">.</span><span class="token function">append</s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/clession-part2/">
+                <a href="/fucksylu-bjmf/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="C语言教学-part2">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="班级魔方半自动打卡">
                         
-                        <span class="card-title">C语言教学-part2</span>
+                        <span class="card-title">班级魔方半自动打卡</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            占位符介绍，“语句”介绍，强制类型转换介绍
+                            微信扫码登录,22:00-23:00自动签到打卡，地点为沈阳理工大学
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/" class="post-category">
-                                    琴理工作室
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
                                 </a>
                             
                             
@@ -796,16 +713,16 @@ sb<span class="token punctuation">.</span><span class="token function">append</s
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
+                    <a href="/tags/HttpClient/">
+                        <span class="chip bg-color">HttpClient</span>
                     </a>
                     
-                    <a href="/tags/%E7%90%B4%E7%90%86%E5%B7%A5%E4%BD%9C%E5%AE%A4/">
-                        <span class="chip bg-color">琴理工作室</span>
+                    <a href="/tags/%E6%90%9E%E4%BA%8B/">
+                        <span class="chip bg-color">搞事</span>
                     </a>
                     
                 </div>
